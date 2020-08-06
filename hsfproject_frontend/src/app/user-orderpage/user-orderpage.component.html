@@ -1,0 +1,49 @@
+
+  <app-appheader></app-appheader>
+<br><br><br>
+<div  >
+<table align="center" border=2 width=40% height=30% [style.background]="'url(http://localhost:3000/images/g9.jpg)'">
+<br>
+<font size=6 style="font:bold" class="text-white">ORDER SUMMARY :</font>
+
+<br><br>
+  <tr>
+   <td><h4 style="font:bold" class="text-white">YOUR NAME :</h4></td>
+   <td><h4 style="font:bold;margin-left: -380px" class="text-white">{{this.uname}}</h4></td>
+
+  </tr>
+
+
+  <tr>
+    <td><h4 style="font:bold" class="text-white">YOUR DESIGNER :</h4></td>
+    <td>  <h4  style="font:bold;margin-left: -380px" class="text-white">{{dname}}</h4></td>
+
+   </tr>
+   <tr>
+    <td><h4 style="font:bold" class="text-white">YOUR ITEM :</h4></td>
+      <td><h4  style="font:bold;margin-left: -380px" class="text-white">{{sname}}</h4></td>
+
+   </tr>
+   <tr>
+    <td><h4 style="font:bold" class="text-white">ORDER DATE :</h4></td>
+      <td><h4  style="font:bold;margin-left: -380px" class="text-white">{{this.sub_order_date}}</h4></td>
+
+   </tr>
+   <tr>
+    <td><h4 style="font:bold" class="text-white">TOTAL AMOUNT :</h4></td>
+     <td> <h4  style="font:bold;margin-left: -380px" class="text-white">{{this.o_amount}}</h4></td>
+
+   </tr>
+<br>
+           <font size=6 style="font:bold" class="text-white">PAYMENT OPTIONS :</font>
+           <br><br>
+
+            <div class="form-group text-center">
+              <br>
+
+              <a  class="btn btn-primary" (click)="oncredit()">CREDIT CARD</a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a  class="btn btn-primary" (click)="ondebit()"  >DEBIT CARD</a>
+          </div>
+</table>
+</div>
+

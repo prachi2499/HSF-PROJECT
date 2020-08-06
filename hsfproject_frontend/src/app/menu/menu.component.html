@@ -1,0 +1,55 @@
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)"
+    style="background-color:rgb(196, 83, 47);">
+
+    <mat-toolbar style="background-color:#383535" class="text-white">Menu
+
+    </mat-toolbar>
+    <mat-nav-list>
+        <!-- <a mat-list-item routerLink="dashboard"><mat-icon>home</mat-icon>&nbsp;&nbsp;Home</a> -->
+      <a mat-list-item routerLink="/viewadmin"  class="text-white">MY PROFILE</a>
+      <a mat-list-item routerLink="/adminpwd"  class="text-white">CHANGE PASSWORD</a>
+      <a mat-list-item routerLink="/catadmin" class="text-white">MANAGE CATEGORY</a>
+      <a mat-list-item routerLink="/subcatadmin"  class="text-white">MANAGE SUB-CATEGORY</a>
+      <a mat-list-item routerLink="/adminhireorcontest"  class="text-white">ADVERTISING</a>
+      <a mat-list-item routerLink="/brand_hireorcontest"  class="text-white">BRANDING</a>
+      <a mat-list-item routerLink="/train_hireorcontest" class="text-white">TRAINING</a>
+      <a mat-list-item routerLink="/viewalldesig_admin"  class="text-white">VIEW ALL DESIGNERS</a>
+      <!-- <a mat-list-item routerLink="/ordertopfive" class="text-white">TOP 5 ORDERS</a> -->
+      <a mat-list-item routerLink="/" class="text-white">LOGOUT</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color:#383535" class="text-white">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>
+          <img src="http://localhost:3000/images/hsf.jpg" alt="..." height="20px" width="120px" style=" height: 64px;
+          margin-left: -16px"></span>
+        HEMANT SONI FILMS - ADVERTISING + BRANDING + TRAINING
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+         Hey Admin!
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

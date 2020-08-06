@@ -1,0 +1,56 @@
+<div class=row>
+  <div class=col-md-1>
+    <app-menu></app-menu>
+  </div>
+  <div class=col-md-11>
+
+    <br>
+
+
+
+
+      <div class="container">
+        <h1>UPDATE TRAINING</h1>
+        <p>Please fill in this form to make changes</p>
+        <hr>
+
+        <label for="t_part"><b>Number of participants</b></label>
+        <input   type="number" [(ngModel)]="t_participants"  name="t_part" required><br>
+
+
+        <label for="t_type"><b>Type of training</b></label>
+
+        <input   type="text"  [(ngModel)]="t_type"  name="t_type" required><br>
+
+        <label for="t_budget"><b>Budget</b></label>
+        <input   type="number" [(ngModel)]="t_budget"  name="t_budget" required><br>
+
+        <label for="t_date"><b>Date</b></label>
+        <input   type="text" [(ngModel)]="t_date"  name="t_date" required><br>
+
+        <label for="t_title"><b>Title</b></label>
+        <input   type="text" [(ngModel)]="t_title"  name="t_title" required><br>
+
+        <label for="t_company"><b>Company</b></label>
+        <input   type="text" [(ngModel)]="t_company"  name="t_company" required><br>
+
+        <label for="t_help"><b>Help</b></label>
+        <input   type="text" [(ngModel)]="t_help"  name="t_help" required><br>
+
+
+
+
+        <div class="clearfix">
+
+          <button type="submit" class="signupbtn" (click)="onsave()">SAVE CHANGES</button>
+        </div>
+      </div>
+
+
+
+
+
+      </div>
+      </div>
+
+

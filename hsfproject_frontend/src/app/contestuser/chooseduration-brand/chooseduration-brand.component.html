@@ -1,0 +1,21 @@
+<div  [style.background]="'url(http://localhost:3000/images/g9.jpg)'" style="height: 100%">
+  <app-appheader></app-appheader>
+
+<mat-card >
+    <mat-card-content class="example-card">
+        <div>
+            <h1 align="center">CHOOSE DURATION FOR YOUR CONTEST</h1>
+        </div>
+        <hr>
+      <div  class="container">
+      <label><h3>How long do you want this contest to continue?</h3></label>
+      <div class="form-group"  *ngFor="let item of durationarr">
+          <input type="radio"class="form-control" [value]="item" [(ngModel)]="e_time">
+          {{item}}
+      </div>
+              <button class="btn btn-primary form-control" (click)="OnAddDuration()">ADD</button>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>

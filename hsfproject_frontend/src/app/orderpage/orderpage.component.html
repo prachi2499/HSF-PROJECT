@@ -1,0 +1,65 @@
+<div class=row>
+    <div class=col-md-1>
+      <app-menu></app-menu>
+    </div>
+    <div class=col-md-11>
+
+      <br>
+      <div align="center">
+      <font size=6>ORDER SUMMARY</font>
+    </div>
+        <hr>
+        <br><br><br><br><br><br>
+        <div>
+        <table align="center" border=4 width=40% height=30%>
+
+
+
+
+          <tr>
+           <h4>  <td style="font:bold">Your name :
+             <td style="font:bold">{{uname}}</td></h4>
+
+          </tr>
+          <tr>
+              <h4>  <td style="font:bold">Your Designer :
+                <td style="font:bold">{{dname}}</td></h4>
+
+             </tr>
+             <tr>
+                <h4>  <td style="font:bold">Your Item :
+                  <td style="font:bold">{{sname}}</td></h4>
+
+               </tr>
+               <tr>
+                  <h4>  <td style="font:bold">Your Order Date :
+                    <td style="font:bold">{{this.sub_order_date}}</td></h4>
+
+                 </tr>
+                 <tr>
+                    <h4>  <td style="font:bold">Total Amount :
+                      <td style="font:bold">{{this.o_amount}}</td></h4>
+
+                   </tr>
+                   <hr>
+                   <h3><th style="font:bold">Payment Options :</th></h3>
+                   <hr>
+
+                   <div align="center">
+                      <button mat-raised-button (click)="oncredit()" class="text-white" style="background-color: #337ab7;width: 60xpx;height: 50px">
+                        CREDIT CARD</button>
+
+                    <button mat-raised-button color="warn" (click)="ondebit()" style="width: 60xpx;height: 50px">
+                     DEBIT CARD</button>
+                    </div>
+                   <!-- <div class="example-button-row">
+
+                      <button mat-flat-button color="primary" (click)="oncredit()"><h3>CREDIT CARD</h3></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button mat-flat-button color="primary" (click)="ondebit()"><h3>DEBIT CARD</h3></button>
+                    </div> -->
+        </table>
+        </div>
+
+
+        </div>
+        </div>

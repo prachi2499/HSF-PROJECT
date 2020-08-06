@@ -1,0 +1,63 @@
+
+<div class=row>
+    <div class=col-md-1>
+      <app-menu></app-menu>
+    </div>
+    <div class=col-md-11>
+
+      <br>
+        <div class="head_title text-center" >
+            <h2>REVIEWS</h2>
+            <div class="separator_auto"></div>
+          </div>
+  <hr>
+  <div class=col-md-10>
+
+
+
+        <br>
+        <div align=right style="margin-right: 20px">
+        <!-- <button mat-raised-button color=primary>LEAVE YOUR COMMENTS</button> -->
+      </div>
+      <br>
+      &nbsp;&nbsp;
+
+
+      <div class="col-md-12">
+
+          <div class="thumbnail" *ngFor="let item of revuserarr" style="background-color:#383535;margin-left: 100px">
+
+            <div class="div2">
+
+                  <font size=6 style="color: yellow">Rating :- {{item.stars}} / out of 5 stars</font>
+
+
+                <br>
+                <br>
+                <div class="text-white">
+              <font size=6>{{item.description}}</font></div>
+              <br>
+              &nbsp;&nbsp;&nbsp;
+              <h3  style="margin-right: 170px;color: yellow;margin-left: 600px">
+
+                  <img src="http://localhost:3000/images/boy.jpg" alt="..."  style="     height: 80px; width: 90px;;border-radius: 100%">
+                  -{{item.name}}
+                </h3>
+            <!-- <img src="http://localhost:3000/images/cupcake.jpg" alt="..." height="420px" width="340px" > -->
+            <div class="caption">
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+  </div>
+</div>
+</div>

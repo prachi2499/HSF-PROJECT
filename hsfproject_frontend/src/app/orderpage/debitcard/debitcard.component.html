@@ -1,0 +1,67 @@
+<div class=row>
+    <div class=col-md-1>
+      <app-menu></app-menu>
+    </div>
+    <div class=col-md-11>
+
+      <br>
+
+    <img src="http://localhost:3000/images/pay1.png" alt="..." height="100px" width="1550px">
+    <br>
+    <form method="POST">
+    <table border=1 align="center" width=70% height=20% style="margin-top:50px">
+     <!-- <h2> <th style="font:bold">Pay With Debit Card</th></h2>
+      <hr> -->
+      <tr>
+        <td colspan="2" style="font:bold;text-align: center;font-size: 40px">Pay With Debit Card</td>
+      </tr>
+      <tr>
+        <td><h4>Debit Card</h4></td>
+      We accept <img src="http://localhost:3000/images/pay2.png" alt="..." height="50px" width="200px">
+       </tr>
+       <tr>
+         <td><h4>Enter Name :</h4></td>
+         <td><input type="text" placeholder="Cardholder's Name" style="width: 900px;height:60px"></td>
+       </tr>
+       <tr>
+          <td><h4>Enter CardNumber :</h4></td>
+          <!-- <td><input type="number" placeholder="CardNumber (No spaces or dashes)" style="width: 900px;height:85px"></td> -->
+          <td><input type="text" appCreditdebit style="width: 900px;height:85px" placeholder="CardNumber"></td>
+        </tr>
+        <tr>
+            <td><h4>Enter Cvv :</h4></td>
+            <td><input type="password" placeholder="CVV" style="width: 900px;height:60px" name="cvv" maxlength="3" required></td>
+
+          </tr>
+          <tr>
+              <td><h4>Expiry date</h4></td>
+              <td><input type="date" placeholder="" style="width: 900px;height:60px"></td>
+
+            </tr>
+            <hr>
+            <tr>
+                <td><h4>Email Address</h4></td>
+                <td><input type="email" placeholder="your email address" style="width: 900px;height:60px"></td>
+
+              </tr>
+              <tr>
+                  <td><h4>Amount :</h4></td>
+                  <td>{{this.o_amount}}</td>
+
+                </tr>
+
+              </table>
+
+
+
+    </form>
+    <div class="text-white" align="center">
+
+
+        <button  (click)="onclickdebit()" style="width: 70%;background-color: #337ab7"><h3>SUBMIT</h3></button>
+                 </div>
+
+
+        </div>
+        </div>
+

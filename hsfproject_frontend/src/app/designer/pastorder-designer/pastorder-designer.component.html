@@ -1,0 +1,56 @@
+<div class="row">
+    <mat-toolbar style="background-color:#383535;margin-left: 215px" class="text-white">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>
+            <img src="http://localhost:3000/images/hsf.jpg" alt="..." height="20px" width="120px" style=" height: 64px;
+            margin-left: -16px">
+          HEMANT SONI FILMS - ADVERTISING + BRANDING + TRAINING
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+         <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+          Hey Designer!
+        </span>
+      </mat-toolbar>
+
+<div class=col-md-1>
+  <app-designermenu></app-designermenu>
+</div>
+  <div class="col-md-10" style="margin-left: 126px">
+    <h1 align="center" >PAST ORDER</h1>
+
+    <br>
+    <hr>
+    <br>
+    <div class="container">
+
+      <table class="table" style="font-size: 20px;">
+        <thead>
+          <th>NAME</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th></th>
+        </thead>
+        <tr *ngFor="let item of arrname">
+            <td>{{item.name}}</td>
+            <td>{{item.o_date}}</td>
+            <td>{{item.o_amount}}</td>
+
+          <!-- <td><button (click)=" onClick(item)">details</button></td> -->
+        </tr>
+      </table>
+    </div>
+    <hr>
+    <!-- <button  (click)="onclickBack()" style="font-size: 25px">BACK</button> -->
+
+  </div>
+</div>

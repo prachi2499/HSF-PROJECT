@@ -1,0 +1,44 @@
+<div class="row">
+    <mat-toolbar style="background-color:#383535;margin-left: 215px" class="text-white">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>
+            <img src="http://localhost:3000/images/hsf.jpg" alt="..." height="20px" width="120px" style=" height: 64px;
+            margin-left: -16px">
+          HEMANT SONI FILMS - ADVERTISING + BRANDING + TRAINING
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+         <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+          Hey Designer!
+        </span>
+      </mat-toolbar>
+
+<div class=col-md-1>
+  <app-designermenu></app-designermenu>
+</div>
+
+    <div class="col-md-10">
+
+      <div style="margin-left: 206px;background-color: #9E9E9E;margin-top: 195px;height: 250px">
+    <h3 align="center">Upload Image</h3>
+    <br>
+    <br><br>
+    <div class="form-group"><input class="form-control" type="file" (change)="onChange($event)"></div>
+
+    <div class="row">
+      <div class="col-md-6" align="center">
+        <br>
+              <button class="btn btn-lg btn-primary form-control" style="    margin-left: 220px;" (click)="OnAdd()">ADD</button>
+      </div>
+  </div>
+  </div>
+</div>

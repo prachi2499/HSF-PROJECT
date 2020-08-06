@@ -1,0 +1,63 @@
+
+<div>
+
+
+    <app-appheader></app-appheader>
+
+      <div class="container">
+        <h1>Tell Us About Your Project</h1>
+        <p>Please fill in this form.</p>
+        <hr>
+        <form #f="ngForm">
+
+        <label for="lang"><b>Choose Your Preferred Language</b></label>
+        <select type="text" class="form-control" name="lang"[(ngModel)]="b_language" id="b_language">
+          <option *ngFor="let item of arrlanguage" [value]="item">
+          {{item}}
+          </option>
+        </select>
+
+
+
+        <label for="sub"><b>Subject</b></label>
+
+        <input   type="text" [(ngModel)]="b_subject" name="sub"><br>
+
+        <label for="design"><b>Design</b></label>
+
+        <input   type="text" [(ngModel)]="b_design"  name="design"  required #desig="ngModel"><br>
+        <div [hidden]="desig.valid || desig.untouched" >
+            <div [hidden]="!desig.errors?.required" class="text-danger">
+                   <font size=5>Design is required</font>
+                   </div>
+               </div>
+
+        <label for="des"><b>Description</b></label>
+
+        <input   type="text"  [(ngModel)]="b_description"  name="des"><br>
+
+        <label for="budg"><b>Budget</b></label>
+
+        <input   type="number"  [(ngModel)]="b_budget"  name="budg"  required #budg="ngModel"><br>
+        <div [hidden]="budg.valid || budg.untouched" >
+            <div [hidden]="!budg.errors?.required" class="text-danger">
+                   <font size=5>Budget is required</font>
+                   </div>
+               </div>
+
+
+
+
+        <div class="clearfix">
+
+          <button type="submit" class="signupbtn" [disabled]="!f.valid" (click)="OnAdd()">ADD</button>
+
+          <button type="submit" class="signupbtn" (click)="onCancel()">CANCEL</button>
+
+        </div>
+      </form>
+      </div>
+      </div>
+
+
+

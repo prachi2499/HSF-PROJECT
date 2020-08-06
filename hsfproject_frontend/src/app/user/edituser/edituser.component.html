@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>
+      <img src="http://localhost:3000/images/boy.jpg" alt="..."  style="     height: 99px; width: 115px;;border-radius: 100%">
+      EDIT PROFILE
+    </h1>
+  <p>Edit your profile here.</p>
+  <hr>
+
+  <label for="email"><b>Email</b></label>
+  <input type="text" [(ngModel)]="email_id" name="email" readonly>
+
+
+
+  <label for="name"><b>Name</b></label>
+  <input type="text"[(ngModel)]="name"  name="nm">
+
+
+  <label for="mobile_no"><b>Mobile no</b></label>
+  <input type="text" [(ngModel)]="mobile_no" name="mobile">
+
+
+  <label for="city"><b>City</b></label>
+  <input type="text"[(ngModel)]="city"  name="city" >
+
+  <label for="gender"><b>Gender</b></label><br>
+  <input type="radio"[(ngModel)]="gender" name="gender" value="m">Male &nbsp;&nbsp;
+  <input type="radio"[(ngModel)]="gender" name="gender" value="f" >Female
+
+ <br><br>
+  <label for="address"><b>Address</b></label>
+  <input type="text"[(ngModel)]="address"  name="address">
+
+
+  <label for="address"><b>Select Type</b></label>
+  <select [(ngModel)]="type" name="type" id="typ" >
+
+      <option disabled="" selected="">Select Type</option>
+    <option value="User">
+      User
+    </option>
+    <option value="Designer">
+      Designer
+    </option>
+  </select>
+
+  <div class="clearfix">
+
+    <button type="submit" class="signupbtn"  (click)="onsavechange()">Save Changes</button>
+  </div>
+</div>

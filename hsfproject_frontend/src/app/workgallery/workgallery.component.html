@@ -1,0 +1,17 @@
+<div  [style.background]="'url(http://localhost:3000/images/g9.jpg)'">
+<app-appheader></app-appheader>
+
+<br><br><br>
+  <div class="row">
+
+    <div *ngFor="let item of arr" class="col-sm-5 col-md-3">
+      <div class="thumbnail" style="height: 350px; width: 300px">
+        <img src="http://localhost:3000/images/{{item.w_img}}" alt="..." style="height: 341px;width: 300px" >
+
+       </div>
+
+
+
+   </div>
+   </div>
+  </div>

@@ -1,0 +1,42 @@
+<div class=row>
+    <div class=col-md-1>
+      <app-menu></app-menu>
+
+    </div>
+
+    <div class=col-md-11>
+
+        <br>
+        <div class="head_title text-center" >
+          <h2 >UPDATE CATEGORY</h2>
+          <div class="separator_auto"></div>
+        </div>
+
+        <table border="2" align="center" style="height: 60%;width: 40%">
+    <div class="form-group">
+
+        <h3><b>Sub-Category Name</b></h3>
+        <mat-form-field  style="width: 100%">
+            <font size=5><input matInput [(ngModel)]="subcat_name"></font>
+          </mat-form-field>
+      </div>
+      <div>
+          <h3><b>Category Name</b></h3>
+        <mat-form-field  style="width: 100%">
+
+          <mat-select placeholder="Select Category Name" [(ngModel)]="fkcat_id" name="selected_catname">
+            <mat-option *ngFor="let item of catname_arr" [value]="item.cat_id">{{item.cat_name}}</mat-option>
+          </mat-select>
+          </mat-form-field>
+
+      </div>
+
+
+
+<button mat-raised-button (click)="onSaveCategory()" style="background-color:#337ab7" class="text-white">SAVE CHANGES</button>
+<button mat-raised-button color="warn" (click)="oncancel()" >
+    CANCEL</button>
+
+</table>
+</div>
+</div>

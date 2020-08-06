@@ -1,0 +1,52 @@
+<div class=row>
+    <mat-toolbar style="background-color:#383535;margin-left: 214px" class="text-white">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>
+            <img src="http://localhost:3000/images/hsf.jpg" alt="..." height="20px" width="120px" style=" height: 64px;
+            margin-left: -16px"></span>
+          HEMANT SONI FILMS - ADVERTISING + BRANDING + TRAINING
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+           Hey Admin!
+      </mat-toolbar>
+    <div class=col-md-1>
+      <app-menu></app-menu>
+    </div>
+
+    <div class=col-md-11>
+
+ <div class="container">
+    <h1>
+        <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+      CHANGE PASSWORD</h1>
+    <p>Please fill in this form to change password</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" [(ngModel)]="email_id" name="email" required readonly>
+
+    <!-- <label for="psw"><b>Old Password</b></label>
+    <input type="text"  name="psw" required readonly>{{this.y}} -->
+
+    <label for="npsw"><b>Change Password</b></label>
+    <input type="text" [(ngModel)]="password"  name="npsw" required>
+
+
+    <div class="clearfix">
+
+      <button type="submit" class="signupbtn"  (click)="onsave()">SAVE PASSWORD</button>
+    </div>
+  </div>
+  </div>
+  </div>

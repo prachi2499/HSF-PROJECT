@@ -1,0 +1,36 @@
+<div  [style.background]="'url(http://localhost:3000/images/g9.jpg)'" style="width: 100%;height: 100%">
+<app-appheader></app-appheader>
+<section id="service" class="service">
+  <div class="container">
+      <div class="row">
+          <div class="main_service roomy-100">
+              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                  <div class="head_title text-center" >
+                      <h2 class="text-white">Browse all categories.</h2>
+                      <div class="separator_auto"></div>
+                     </div>
+              </div>
+
+              <div class="col-md-4" style="margin-top: 10px;" *ngFor="let item of arrsubcat">
+                <div class="service_item">
+                    <i class="icofont icofont-light-bulb">    </i>
+
+
+                <button (click)="onclicksubcat(item.subcat_id)" type="button" class="btn btn-outline-secondary" style="height:120px;width:85%">
+
+                    <font size=3> {{item.subcat_name}}</font>
+
+
+                 </button>
+
+                </div>
+            </div>
+
+
+
+          </div>
+      </div><!--End off row -->
+  </div><!--End off container -->
+</section> <!--End off Featured section-->
+</div>
+

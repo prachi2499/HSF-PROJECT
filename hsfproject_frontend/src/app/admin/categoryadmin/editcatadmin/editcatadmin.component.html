@@ -1,0 +1,38 @@
+<div class=row>
+    <div class=col-md-1>
+      <app-menu></app-menu>
+
+    </div>
+
+    <div class=col-md-11>
+
+        <br>
+        <div class="head_title text-center" >
+          <h2 >UPDATE CATEGORY</h2>
+          <div class="separator_auto"></div>
+        </div>
+
+
+<div>
+
+    <table border="2" align="center" style="height: 60%;width: 40%">
+    <div class="form-group">
+        <h3><b>Category Name</b></h3>
+        <hr>
+        <mat-form-field style="width: 100%">
+            <font size=5><input matInput [(ngModel)]="cat_name" align="center"></font>
+          </mat-form-field>
+          <br>
+          <br>
+          <button mat-raised-button class="text-white" (click)="onSaveCategory()" style="background-color: #337ab7">SAVE CHANGE</button>
+          <button mat-raised-button color="warn" (click)="oncancel()" >
+              CANCEL</button>
+
+      </div>
+    </table>
+
+
+</div>
+</div>
+</div>
+

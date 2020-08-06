@@ -1,0 +1,62 @@
+<div  [style.background]="'url(http://localhost:3000/images/g9.jpg)'">
+  <app-appheader></app-appheader>
+  <diV align="center">
+  <h2  class="text-white">
+
+    INVITE DESIGNER OF YOUR CHOICE</h2>
+  </diV>
+  <hr>
+  <div class="container">
+
+    <br>
+
+      <div class="container" class="div1">
+
+
+        <div class="row">
+          <div class="col-md-12">
+              <div class="row">
+
+                  <div *ngFor="let item of designerarr " class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <div class="caption" align="center">
+
+                        <font size=6>{{item.name}}</font>
+                      <img src="http://localhost:3000/images/designer.jpg" alt="..." height="420px" width="340px">
+
+
+
+
+
+
+
+                      <div class="example-button-row">
+
+
+                              <button mat-raised-button  (click)="onaddDesigner(item)"><font size=4>ADD</font></button>
+
+                              <button mat-raised-button color="warn"  (click)="ondetails(item)"><font size=4>DETAILS</font></button>
+
+
+                              <button mat-raised-button (click)="onreview(item)" ><font size=4>REVIEWS</font></button>
+                        </div>
+
+
+
+
+
+
+                      </div>
+                     </div>
+
+                     </div>
+                  </div>
+                 </div>
+  </div>
+
+
+
+
+
+
+

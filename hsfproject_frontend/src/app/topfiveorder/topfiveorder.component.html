@@ -1,0 +1,57 @@
+<div class=row>
+    <mat-toolbar style="background-color:#383535;margin-left: 214px" class="text-white">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>
+            <img src="http://localhost:3000/images/hsf.jpg" alt="..." height="20px" width="120px" style=" height: 64px;
+            margin-left: -16px"></span>
+          HEMANT SONI FILMS - ADVERTISING + BRANDING + TRAINING
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+           Hey Admin!
+      </mat-toolbar>
+    <div class=col-md-1>
+      <app-menu></app-menu>
+    </div>
+
+    <div class=col-md-11>
+
+      <br>
+        <div class="head_title text-center" >
+            <h2>TOP 5 ORDERS</h2>
+            <div class="separator_auto"></div>
+          </div>
+
+          <table border=3 style="    margin-left: 500px;
+          width: 463px;
+          height: 353px;    background-color: #ec6c44;">
+
+            <tr>
+               <td> <h3><b>CATEGORY</b></h3></td>
+             <td> <h3><b>AMOUNT</b></h3></td>
+
+            </tr>
+
+            <tr *ngFor="let item of toparr">
+
+              <td><h4><b>{{item.c}}</b></h4></td>
+              <td><h4><b>{{item.o}}</b></h4></td>
+            </tr>
+          </table>
+          <!-- <div *ngFor="let item of toparr">a
+           <h1 align="center"> {{item.c}}
+            {{item.o}}</h1>
+          </div> -->
+
+          </div>
+          </div>

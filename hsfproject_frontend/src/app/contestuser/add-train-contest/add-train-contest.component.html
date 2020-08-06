@@ -1,0 +1,56 @@
+
+<div>
+
+
+    <app-appheader></app-appheader>
+
+      <div class="container">
+        <h1>Tell Us About Your Project</h1>
+        <p>Please fill in this form.</p>
+        <hr>
+
+        <label for="sub"><b>Number of participants</b></label>
+
+        <input   type="number" [(ngModel)]="t_participants"  name="sub"><br>
+
+        <label for="sub"><b>Type</b></label>
+
+        <input   type="text" [(ngModel)]="t_type"  name="sub"><br>
+
+
+        <label for="sub"><b>Budget</b></label>
+
+        <input   type="number" [(ngModel)]="t_budget"  name="sub"><br>
+
+        <label for="sub"><b>Date</b></label>
+
+        <input   type="date" [(ngModel)]="t_date"  name="sub"><br>
+
+        <label for="sub"><b>Title</b></label>
+
+        <input   type="text" [(ngModel)]="t_title"  name="sub"><br>
+
+        <label for="sub"><b>Company</b></label>
+
+        <input   type="text" [(ngModel)]="t_company"  name="sub"><br>
+
+        <label for="sub"><b>Help</b></label>
+
+        <input   type="text" [(ngModel)]="t_help"  name="sub"><br>
+
+
+
+
+
+
+<div class="clearfix">
+
+          <button type="submit" class="signupbtn" (click)="addtrainingcontest()">ADD</button>
+
+          <button type="submit" class="signupbtn" (click)="onCancel()">CANCEL</button>
+
+        </div>
+      </div>
+
+
+

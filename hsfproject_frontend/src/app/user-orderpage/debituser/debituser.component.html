@@ -1,0 +1,67 @@
+<app-appheader></app-appheader>
+
+<img src="http://localhost:3000/images/pay1.png" alt="..." height="100px" width="1550px" style="margin-top: -18px">
+
+<br>
+<form method="POST">
+
+
+<table border=1 align="center" width=70% height=20% style="margin-top:50px">
+ <!-- <h2> <th style="font:bold">Pay With Credit Card</th></h2>
+  <hr> -->
+
+
+  <tr>
+    <td colspan="2" style="font:bold;text-align: center;font-size: 30px">Pay With Debit Card</td>
+  </tr>
+  <tr>
+    <td><font size=5>Debit Card</font></td>
+  We accept <img src="http://localhost:3000/images/pay2.png" alt="..." height="50px" width="200px">
+   </tr>
+   <tr>
+     <td><font size=5>Enter Name :</font></td>
+     <td><input type="text" placeholder="Cardholder's Name" style="width: 900px;height:60px"></td>
+
+
+    </tr>
+
+
+   <tr>
+      <td><font size=5>Enter CardNumber :</font></td>
+
+    <td><input type="text" appCreditdebit style="width: 900px;height:85px" placeholder="CardNumber"></td>
+    </tr>
+    <tr>
+        <td><font size=5>Enter Cvv :</font></td>
+        <td><input type="password"  placeholder="CVV" style="width: 900px;height:60px" name="cvv" required maxlength="3"></td>
+
+      </tr>
+      <tr>
+          <td><font size=5>Expiry date</font></td>
+          <td><input type="date" placeholder="" style="width: 900px;height:60px"></td>
+
+        </tr>
+        <hr>
+        <tr>
+            <td><font size=5>Email Address</font></td>
+            <td><input type="email" placeholder="your email address" style="width: 900px;height:60px"></td>
+
+          </tr>
+          <tr>
+              <td><font size=5>Amount :</font></td>
+              <td>{{this.o_amount}}</td>
+
+            </tr>
+
+          </table>
+
+
+
+</form>
+
+              <div class="form-group text-center">
+                <a  class="btn btn-primary" (click)="onclickdebit()" style="width: 70%"><font size=6>SUBMIT</font></a>
+              </div>
+
+
+

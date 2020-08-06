@@ -1,0 +1,19 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+.mark1
+{
+  background-color:#FFEB3B;
+  border-radius: 50%;
+  height: 20%;
+  width: 10px;
+}

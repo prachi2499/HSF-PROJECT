@@ -1,0 +1,75 @@
+<div class=row>
+  <div class=col-md-1>
+    <app-menu></app-menu>
+  </div>
+  <div class=col-md-11>
+
+    <br>
+    <div class="head_title text-center" >
+      <h2>INVITE DESIGNER OF YOUR CHOICE</h2>
+      <div class="separator_auto"></div>
+    </div>
+      <hr>
+      <div class="container">
+
+
+
+          <div class="container" class="div1">
+
+
+            <div class="row">
+              <div class="col-md-12">
+                  <div class="row">
+
+                      <div *ngFor="let item of designerarr " class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption" align="center">
+
+                            <font size=6 >{{item.name}}</font>
+                          <img src="http://localhost:3000/images/designer.jpg" alt="..." height="420px" width="340px">
+
+
+
+
+
+
+
+                          <!-- <div class="example-button-row">
+
+
+                                  <button mat-raised-button  (click)="onaddDesigner(item)"><h2>ADD</h2></button>
+
+                                  <button mat-raised-button color="warn"  (click)="ondetail(item)"><h2>DETAILS</h2></button>
+
+
+                            </div> -->
+
+                            <div>
+                              <button mat-raised-button (click)="onaddDesigner(item)" class="text-white" style="background-color: #337ab7;width: 109px;
+                              height: 43px;">
+                                ADD</button>
+
+                            <button mat-raised-button color="warn" (click)="onreview(item)" style="width: 109px;
+                            height: 43px;" >
+                             REVIEWS</button>
+                            </div>
+                      <!-- <button (click)="onadd(item)">Add</button> -->
+
+                          </div>
+                         </div>
+
+                         </div>
+                      </div>
+                     </div>
+      </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+

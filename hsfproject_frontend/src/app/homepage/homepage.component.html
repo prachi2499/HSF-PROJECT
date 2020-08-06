@@ -1,0 +1,114 @@
+<div class="culmn">
+
+
+  <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
+
+
+      <div class="container">
+
+
+
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                  <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand" href="#brand">
+
+
+
+              </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbar-menu">
+              <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                  <li><a routerLink="/home">Home</a></li>
+                  <li><a routerLink="/about">About</a></li>
+
+                  <li><a routerLink="/cat">Services</a></li>
+                  <li><a routerLink="/gallery">Work Gallery</a></li>
+
+
+                  <li><a routerLink="/contact">Enquiry Form</a></li>
+                  <li><a routerLink="/faq">Let's Talk!</a></li>
+                  <li><a (click)="onCheckContest()" class="pointer">Check Contest</a></li>
+                  <li><a routerLink="/logout">Logout</a></li>
+                  <li style="margin-top: 22px;margin-left: -16px">
+                      <button mat-button [matMenuTriggerFor]="menu">
+
+                      <img src="http://localhost:3000/images/side.png" style="height: 18px;width: 24px">
+                      </button>
+                         <mat-menu #menu="matMenu">
+                    <button mat-menu-item  (click)="onclickview()">View Profile</button>
+                    <button mat-menu-item  (click)="onclickedit()">Edit Profile</button>
+                    <button mat-menu-item  (click)="onclickpwd()">Change Password</button>
+
+              </mat-menu>
+
+                </li>
+                <!-- <li><a routerLink="/login">LOGIN</a></li> -->
+
+               </ul>
+              </div>
+      </div>
+ </nav>
+
+ <section id="hello" class="home bg-mega">
+      <div class="overlay"></div>
+      <div class="container">
+          <div class="row">
+              <div class="main_home">
+                  <div class="home_text">
+                      <h1 class="text-white">WE’RE <br /> CREATIVE DESIGNERS!</h1>
+                  </div>
+
+                  <div class="home_btns m-top-40">
+                      <a routerLink="/cat" class="btn btn-primary m-top-20">GET STARTED</a>
+                      <a routerLink="/login" class="btn btn-default m-top-20">BACK TO LOGIN</a>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </section>
+  <br><br><br><br>
+
+  <h2>
+   &nbsp;&nbsp; <b>Logos, Leaflets , Short Films ,<br>    &nbsp;&nbsp; Training & more!</b>
+
+  </h2>
+  <br>
+  <h4>
+   &nbsp; <b>- Get the perfect designs , video films and training <br>  &nbsp; &nbsp; with your budget , we’ll help get it done.</b>
+  </h4>
+  <br><br><br>
+<div>
+  <angular-image-slider [images]="imagesUrl" style="height: 100px;width: 50px"></angular-image-slider>
+</div>
+
+
+
+
+  <br>
+  <div>
+
+
+      <div class="head_title text-center">
+
+         <br><br><br><br>
+          <h2>FEATURED WORK</h2>
+
+<div class="separator_auto"></div>
+</div>
+<iframe width="1800" height="400" src="https://www.youtube.com/embed/gCDfnGfKoU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+
+
+
+  </div>
+
+
+
+
+
+

@@ -1,0 +1,191 @@
+
+<div class=row>
+  <div class=col-md-1>
+    <app-menu></app-menu>
+  </div>
+  <div class=col-md-11>
+
+    <br>
+      <div class="head_title text-center" >
+          <h2>TRAINING MANAGEMENT FOR HIRE</h2>
+          <div class="separator_auto"></div>
+        </div>
+
+      <hr>
+
+
+
+      <div>
+        <button mat-raised-button (click)="onAddplus()" class="text-white" style="margin-left: 80px;background-color: #337ab7">
+          HIRE A DESIGNER</button>
+
+      <button mat-raised-button color="warn" (click)="onDeleteMulTraining()" style="margin-left: -1px">
+       DELETE ALL</button>
+      </div>
+
+
+
+               <!-- <div align="start">
+            <button mat-raised-button (click)="onAddplus()" color=primary>
+              <mat-icon>add_circle</mat-icon>ADD TRAINING</button>
+            </div> -->
+            <!-- <button class="btn btn-primary" (click)="onAddplus()">HIRE DESIGNER</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button class="btn btn-primary" (click)="onDeleteMulTraining()">DELETE ALL</button>
+
+      <br> -->
+
+
+
+      <div>
+        <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search training">
+      </mat-form-field>
+
+      <table mat-table [dataSource]="trainingDataSource" class="mat-elevation-z8" multiTemplateDataRows width=100%>
+        <!-- <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+          <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+          <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+        </ng-container> -->
+
+          <ng-container matColumnDef="check">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let element">
+                <input type="checkbox" (change)="trainingcheckchange(element)">
+              </td>
+            </ng-container>
+
+        <ng-container matColumnDef="t_participants">
+          <th mat-header-cell *matHeaderCellDef> PARTICIPANTS </th>
+          <td mat-cell *matCellDef="let element"> {{element.t_participants}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="t_type">
+            <th mat-header-cell *matHeaderCellDef> TYPE </th>
+            <td mat-cell *matCellDef="let element"> {{element.t_type}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="t_budget">
+              <th mat-header-cell *matHeaderCellDef> BUDGET </th>
+              <td mat-cell *matCellDef="let element"> {{element.t_budget}} </td>
+            </ng-container>
+
+          <ng-container matColumnDef="t_date">
+                <th mat-header-cell *matHeaderCellDef> DATE </th>
+                <td mat-cell *matCellDef="let element"> {{element.t_date}} </td>
+              </ng-container>
+
+         <ng-container matColumnDef="t_title">
+                  <th mat-header-cell *matHeaderCellDef> TITLE </th>
+                  <td mat-cell *matCellDef="let element"> {{element.t_title}} </td>
+                </ng-container>
+
+         <ng-container matColumnDef="t_company">
+                    <th mat-header-cell *matHeaderCellDef> COMPANY </th>
+                    <td mat-cell *matCellDef="let element"> {{element.t_company}} </td>
+                  </ng-container>
+
+          <ng-container matColumnDef="t_help">
+                      <th mat-header-cell *matHeaderCellDef> HELP </th>
+                      <td mat-cell *matCellDef="let element"> {{element.t_help}} </td>
+                    </ng-container>
+
+          <ng-container matColumnDef="fkuser_id">
+                        <th mat-header-cell *matHeaderCellDef> USER  </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                      </ng-container>
+
+          <ng-container matColumnDef="fkdesigner_id">
+                          <th mat-header-cell *matHeaderCellDef> DESIGNER </th>
+                          <td mat-cell *matCellDef="let element"> {{element.fkdesigner_id}} </td>
+                        </ng-container>
+
+          <ng-container matColumnDef="fksubcat_id">
+                            <th mat-header-cell *matHeaderCellDef> SUB CAT </th>
+                            <td mat-cell *matCellDef="let element"> {{element.subcat_name}} </td>
+                          </ng-container>
+
+
+                          <ng-container matColumnDef="Action">
+                            <th mat-header-cell *matHeaderCellDef><b>ACTION</b> </th>
+                            <td mat-cell *matCellDef="let element">
+                              <!-- <mat-chip-list>
+
+                                <mat-chip color="accent" selected (click)="onupdate(element)">EDIT</mat-chip>
+                                <mat-chip color="accent" selected (click)="onDelete(element)">DELETE</mat-chip>
+                               </mat-chip-list> -->
+
+                               <div>
+
+                                <button mat-raised-button (click)="onUpdateTraining(element)" class="text-white" style="background-color:#337ab7">
+                                  EDIT</button>&nbsp;&nbsp;&nbsp;
+
+
+                              <button mat-raised-button color="warn" (click)="onDeleteTraining(element)"  >
+                               DELETE</button>
+
+                              </div>
+                            </td>
+                          </ng-container>
+
+
+          <ng-container matColumnDef="expandedDetail">
+          <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+            <div class="example-element-detail"
+                 [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+                 <tr>
+                 <div class="example-element-position">
+                    <font size="2"><b>PARTICIPANTS:</b></font>
+                    <font size="3"><i>{{element.t_participants}}</i></font>
+
+                  </div>
+                </tr>
+                <tr>
+                    <div class="example-element-position">
+                       <font size="2"><b>TYPE:</b></font>
+                       <font size="3"><i>{{element.t_type}}</i></font>
+
+                     </div>
+                   </tr>
+                   <tr>
+                      <div class="example-element-position">
+                         <font size="2"><b>COMAPANY:</b></font>
+                        <font size="3"><i>{{element.t_company}}</i></font>
+
+                       </div>
+                     </tr>
+              <div class="example-element-position">
+                <font size="3"><b>HELP:</b></font>
+              <font size='3'><i>{{element.t_help}}</i></font>
+
+              </div>
+
+            </div>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let element; columns: displayedColumns;"
+            class="example-element-row"
+            [class.example-expanded-row]="expandedElement === element"
+            (click)="expandedElement = expandedElement === element ? null : element">
+        </tr>
+        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+
+
+        <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+      </table>
+      <br><br>
+
+          <br>
+          <br>
+
+
+      </div>
+
+
+
+
+  </div>
+</div>

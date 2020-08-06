@@ -1,0 +1,46 @@
+/* .div4
+{
+
+	height:70%;
+	width:100%;
+	padding:18px;
+	position:relative;
+	top:13px;
+	left:-15px;
+
+} */
+
+.div5
+{
+	background-image:url("http://localhost:3000/images/dhruvi1.jpg");
+	background-repeat:no-repeat;
+  border-radius:100%;
+
+
+}
+.div6
+{
+
+
+	background-image:url("http://localhost:3000/images/priya1.jpg");
+	background-repeat:no-repeat;
+	border-radius:100%;
+         position:relative;
+	top:-222px;
+	left:500px;
+
+
+}
+.div7
+{
+
+
+	background-image:url("http://localhost:3000/images/pr6.png");
+	background-repeat:no-repeat;
+	border-radius:100%;
+        position:relative;
+	top:-443px;
+	left:1000px;
+
+
+}

@@ -1,0 +1,55 @@
+
+<div>
+
+
+    <app-appheader></app-appheader>
+
+      <div class="container">
+        <h1>Tell Us About Your Project</h1>
+        <p>Please fill in this form.</p>
+        <hr>
+
+        <label for="lang"><b>Choose Your Preferred Language</b></label>
+        <select type="text" class="form-control" [(ngModel)]="a_language" id="a_language">
+          <option *ngFor="let item of arrlanguage" [value]="item">
+          {{item}}
+          </option>
+        </select>
+
+
+
+        <label for="sub"><b>Name your project</b></label>
+
+        <input   type="text" [(ngModel)]="a_projectname" name="sub"><br>
+
+
+        <label for="timeline"><b>What's Your Timeline?</b></label><br><br>
+        <mat-radio-group class="example-radio-group" [(ngModel)]="a_timeline">
+          <mat-radio-button class="example-radio-button" *ngFor="let arr of arrtimeline" [value]="arr">
+            {{arr}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <br>
+
+
+
+        <label for="des"><b>Budget</b></label>
+
+        <input   type="number"  [(ngModel)]="a_price"  name="des"><br>
+
+
+
+
+
+
+        <div class="clearfix">
+
+          <button type="submit" class="signupbtn" (click)="addadvcontest()">ADD</button>
+
+          <button type="submit" class="signupbtn" (click)="onCancel()">CANCEL</button>
+
+        </div>
+      </div>
+
+
+

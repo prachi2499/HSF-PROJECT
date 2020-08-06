@@ -1,0 +1,47 @@
+<html>
+<body>
+  <h1 align="center"></h1>
+   <hr>
+     <div class="wrap">
+        <!-- <img src="http://localhost:3000/images/boy.jpg" alt="..."  style="     height: 99px; width: 115px;;border-radius: 100%;margin-left: -114px;
+        margin-top: -160px;"> -->
+       <form #f="ngForm">
+      <input style="font-size: bolder"  placeholder="Enter Email_id" name="email_id"  type="email" [(ngModel)]="email_id" id="title" required #em="ngModel">
+      <div [hidden]="em.valid || em.untouched" >
+       <div [hidden]="!em.errors?.required" class="text-danger">
+              <font size=5>Email is required</font>
+              </div>
+          </div>
+      <br>
+     <input placeholder="Enter your password" name="password" type="password" [(ngModel)]="password"  minlength="8" required  #pwd="ngModel" ><br>
+     <div *ngIf="pwd.invalid || pwd.touched" >
+      <div *ngIf="pwd.errors?.minlength"  class="text-danger">
+        <font size=4>password must be at least 8 characters long.</font>
+          </div>
+         </div>
+          <div [hidden]="pwd.valid || pwd.untouched">
+          <div [hidden]="!pwd.errors?.required"  class="text-danger">
+                <font size=5> password is must</font>
+              </div>
+             </div>
+              <br>
+      <button  color="primary" (click)="onlogin()"  [disabled]="!f.valid">LOGIN</button>
+      <button  color="primary" (click)="onsignup()">SIGNUP</button>
+      <button  color="primary" (click)="onforgetpassword()">FORGET PASSWORD</button>
+  </form>
+   </div>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

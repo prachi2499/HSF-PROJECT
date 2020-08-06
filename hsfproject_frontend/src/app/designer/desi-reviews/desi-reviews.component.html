@@ -1,0 +1,86 @@
+
+<div class=row>
+    <mat-toolbar style="background-color:#383535;margin-left: 215px" class="text-white">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>
+            <img src="http://localhost:3000/images/hsf.jpg" alt="..." height="20px" width="120px" style=" height: 64px;
+            margin-left: -16px">
+          HEMANT SONI FILMS - ADVERTISING + BRANDING + TRAINING
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+         <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+          Hey Designer!
+        </span>
+      </mat-toolbar>
+
+<div class=col-md-1>
+  <app-designermenu></app-designermenu>
+</div>
+  <div class=col-md-11>
+
+    <br>
+      <div class="head_title text-center" >
+          <h2>REVIEWS</h2>
+          <div class="separator_auto"></div>
+        </div>
+<hr>
+<div class=col-md-10>
+
+
+
+      <br>
+      <div align=right style="margin-right: 20px">
+      <!-- <button mat-raised-button color=primary>LEAVE YOUR COMMENTS</button> -->
+    </div>
+    <br>
+    &nbsp;&nbsp;
+
+
+    <div class="col-md-12">
+
+        <div class="thumbnail" *ngFor="let item of revuserarr" style="background-color:#383535;margin-left: 100px">
+
+          <div class="div2">
+
+                <font size=6 style="color: yellow">Rating :- {{item.stars}} / out of 5 stars</font>
+
+
+              <br>
+              <br>
+              <div class="text-white">
+            <font size=6>{{item.description}}</font></div>
+            <br>
+            &nbsp;&nbsp;&nbsp;
+            <h3  style="margin-right: 170px;color: yellow;margin-left: 600px">
+
+                <img src="http://localhost:3000/images/boy.jpg" alt="..."  style="     height: 80px; width: 90px;;border-radius: 100%">
+                -{{item.name}}
+              </h3>
+          <!-- <img src="http://localhost:3000/images/cupcake.jpg" alt="..." height="420px" width="340px" > -->
+          <div class="caption">
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+</div>
+</div>
+</div>

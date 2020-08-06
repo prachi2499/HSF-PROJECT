@@ -1,0 +1,91 @@
+<div class=row>
+    <mat-toolbar style="background-color:#383535;margin-left: 215px" class="text-white">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>
+            <img src="http://localhost:3000/images/hsf.jpg" alt="..." height="20px" width="120px" style=" height: 64px;
+            margin-left: -16px">
+          HEMANT SONI FILMS - ADVERTISING + BRANDING + TRAINING
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+         <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+          Hey Designer!
+        </span>
+      </mat-toolbar>
+
+<div class=col-md-1>
+  <app-designermenu></app-designermenu>
+</div>
+    <div class=col-md-11>
+
+        <div class="container">
+            <h1>
+                <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+              VIEW PROFILE
+
+          </h1>
+
+            <p>Check your profile here.</p>
+            <hr>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" [(ngModel)]="email_id"  name="email" required readonly>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" [(ngModel)]="password"  name="psw" required readonly>
+
+            <label for="name"><b>Name</b></label>
+            <input type="text"[(ngModel)]="name"  name="nm" required readonly>
+
+
+            <label for="mobile_no"><b>Mobile no</b></label>
+            <input type="text"[(ngModel)]="mobile_no" name="mobile" required  readonly>
+
+
+            <label for="city"><b>City</b></label>
+            <input type="text"[(ngModel)]="city"  name="city" required readonly>
+
+            <label for="gender"><b>Gender</b></label><br>
+            <input type="radio"[(ngModel)]="gender" name="gender" value="m" required readonly>Male &nbsp;
+            <input type="radio"[(ngModel)]="gender" name="gender" value="f" required readonly>Female
+
+           <br><br>
+            <label for="address"><b>Address</b></label>
+            <input type="text"[(ngModel)]="address"  name="address" required readonly>
+
+            <label for="address"><b>Type</b></label>
+            <input type="text"[(ngModel)]="type"  name="type" required readonly>
+
+
+            <!-- <label for="address"><b>Select Type</b></label>
+            <select [(ngModel)]="type" name="type" id="typ" required readonly>
+
+                <option disabled="" selected="">Select Type</option>
+              <option value="User">
+                User
+              </option>
+              <option value="Designer">
+                Designer
+              </option>
+            </select> -->
+
+            <div class="clearfix">
+              <button type="button" class="cancelbtn"  (click)="ondone()">DONE</button>
+              <button type="button" class="cancelbtn"  (click)="onprofile()">EDIT PROFILE</button>
+
+            </div>
+          </div>
+
+    </div>
+
+</div>
+

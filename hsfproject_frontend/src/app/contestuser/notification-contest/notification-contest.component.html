@@ -1,0 +1,75 @@
+<div class="row">
+    <mat-toolbar style="background-color:#383535;margin-left: 215px" class="text-white">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>
+            <img src="http://localhost:3000/images/hsf.jpg" alt="..." height="20px" width="120px" style=" height: 64px;
+            margin-left: -16px">
+          HEMANT SONI FILMS - ADVERTISING + BRANDING + TRAINING
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+         <img src="http://localhost:3000/images/baby.jpeg" alt="..." height="20px" width="90px" style=" height: 64px;border-radius: 100%">
+          Hey Designer!
+        </span>
+      </mat-toolbar>
+
+<div class=col-md-1>
+  <app-designermenu></app-designermenu>
+</div>
+
+    <div class="col-md-10">
+  <div align="center">
+
+      <div class="btn-group" role="group" aria-label="...">
+
+          <div class="head_title text-center" >
+              <h2>NOTIFICATION OF CONTEST</h2>
+              <div class="separator_auto"></div>
+            </div>
+
+      </div>
+
+      <br>
+
+      <!-- <table border=3 style="width: 50%;height: 40%">
+        <th colspan="3" align="center">NEW CONTEST ARRIVED</th>
+        <tr>
+          <td>DESCRIPTION:</td>
+          <td>{{b_description}}</td>
+        </tr>
+      </table> -->
+
+      <table border=3 style="    margin-left: 100px;
+          width: 463px;
+          height: 353px;    ">
+
+            <tr>
+               <td colspan="3"> <h3><b>NEW CONTEST ARRIVED</b></h3></td>
+
+            </tr>
+
+            <tr >
+
+              <td><h4><b>DESCRIPTION:</b></h4></td>
+              <td><h4><b>{{b_description}}</b></h4></td>
+              <td> <button mat-raised-button color="warn"  (click)="onupload()"><font size=4>UPLOAD WORK</font></button>
+              </td>
+            </tr>
+          </table>
+
+
+
+
+  </div>
+  </div>
+
+</div>
